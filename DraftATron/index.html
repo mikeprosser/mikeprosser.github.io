@@ -84,7 +84,7 @@
                                     v-for="(card, index) in factionCards"
                                     :key="index"
                                 >
-                                    {{ card.title }} - {{ card.type_code }}
+                                    {{ card.title }} - {{ card.type_code | capitalize }}
                                 </li>
                             </ul>
                         </li>
@@ -103,7 +103,7 @@
                                     v-for="(card, index) in factionCards"
                                     :key="index"
                                 >
-                                    {{ card.title }} - {{ card.type_code }}
+                                    {{ card.title }} - {{ card.type_code | capitalize }}
                                 </li>
                             </ul>
                         </li>

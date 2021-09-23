@@ -265,8 +265,8 @@ var vm = new Vue({
         reset() {
             this.draftedPacks = [];
             this.draftedPackIds = [];
-            this.corpCards = [];
-            this.runnerCards = [];
+            this.corpCards = {};
+            this.runnerCards = {};
             this.updateIdentities();
             this.latestPack = [];
             this.latestPackName = '';
@@ -318,6 +318,7 @@ var vm = new Vue({
             }
 
             relevantCards[cardInfo.faction_code].push(cardInfo);
+            this.sortCards(relevantCards[cardInfo.faction_code]);
             this.latestPack.push(cardInfo);
         },
         updateIdentities() {
@@ -343,10 +344,8 @@ var vm = new Vue({
 
             this.corpIdentities = corpIds;
         },
-    },
-    computed: {
-        latestPackSorted() {
-            return this.latestPack.sort((a, b) => {
+        sortCards(cardSet) {
+            return cardSet.sort((a, b) => {
                 if (a.type_code == 'identity') {
                     return -1;
                 }
@@ -358,6 +357,11 @@ var vm = new Vue({
                 return (a.type_code > b.type_code) ? 1 : -1;
             });
         }
+    },
+    computed: {
+        latestPackSorted() {
+            return this.sortCards(this.latestPack);
+        },
     },
     filters: {
         capitalize: function (value) {
