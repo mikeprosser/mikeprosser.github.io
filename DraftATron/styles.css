@@ -1,0 +1,44 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+.controls {
+    margin-bottom: 2rem;
+}
+
+.section {
+    border: 1px solid grey;
+    padding: .5em;
+    margin: .5em;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 3rem);
+}
+
+.section--packs {
+    width: calc(50% - 2.5rem);
+}
+
+.section--latest-pack {
+    width: calc(50% - 2.5rem);
+}
+
+.id-info {
+    font-size: 0;
+}
+
+.id-info__block {
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
