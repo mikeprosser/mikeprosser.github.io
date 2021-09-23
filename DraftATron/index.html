@@ -26,10 +26,10 @@
             <h2>Latest Pack - {{ latestPackName }}</h2>
             <ul>
                 <li
-                    v-for="(card, index) in latestPack"
+                    v-for="(card, index) in latestPackSorted"
                     :key="index"
                 >
-                    {{ card.title }} - {{ card.type_code }}
+                    {{ card.title }} - {{ card.type_code | capitalize }}
                 </li>
             </ul>
         </div>

@@ -344,6 +344,28 @@ var vm = new Vue({
             this.corpIdentities = corpIds;
         },
     },
+    computed: {
+        latestPackSorted() {
+            return this.latestPack.sort((a, b) => {
+                if (a.type_code == 'identity') {
+                    return -1;
+                }
+
+                if (b.type_code == 'identity') {
+                    return 1;
+                }
+
+                return (a.type_code > b.type_code) ? 1 : -1;
+            });
+        }
+    },
+    filters: {
+        capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.charAt(0).toUpperCase() + value.slice(1)
+        }
+    },
     mounted() {
         let vm = this;
 

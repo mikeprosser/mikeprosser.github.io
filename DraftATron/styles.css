@@ -42,3 +42,7 @@ h2, h3 {
     width: 50%;
     vertical-align: top;
 }
+
+li {
+    padding: .2em 0;
+}
