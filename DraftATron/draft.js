@@ -195,10 +195,6 @@ var vm = new Vue({
                 "name": "Crimson Dust",
             },
             {
-                "code":"core2",
-                "name":"Revised Core Set"
-            },
-            {
                 "code": "ss",
                 "name": "Sovereign Sight",
             },
@@ -229,10 +225,6 @@ var vm = new Vue({
             {
                 "code": "mo",
                 "name": "Magnum Opus",
-            },
-            {
-                "code": "sc19",
-                "name": "System Core 2019",
             },
             {
                 "code": "df",
